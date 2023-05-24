@@ -12,7 +12,7 @@
     <title>All Works & Sat - Página Oficial</title>
     <link rel="canonical" href="https://allworks&sat.com.ar">
     <link rel="shortcut icon" href="/images/Favicon.png" type="image/png">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/styleAWS.css">
 </head>
 
 <body class="">
@@ -40,39 +40,40 @@
 
         <div class="flexbox">
             <div class="items">
-                <span><a href="../index.html">sobre nosotros</a></span>
-                <span><a href="./services.html">servicios</a></span>
-                <span><a href="./clients.html">clientes</a></span>
+                <span><a href="../indexAWS.html#h3">sobre nosotros</a></span>
+                <span><a href="./services.html#h3">servicios</a></span>
+                <span><a href="./clients.html#h3">clientes</a></span>
                 <span class="active">contacto</span>
-                <span><a href="./faqs.html">faqs</a></span>
+                <span><a href="./faqs.html#h3">faqs</a></span>
+                <span><a href="../indexAW.html">all works</a></span>
             </div>
             <div class="no-estatico">
-                <h3 class="">Contacto</h3><br>
+                <h3 id="h3">Contacto</h3><br>
                 <span class="subtitulo">Comunicate con nosotros, te contestaremos lo antes posible.</span><br><br>
 
                 <div>
-                    <form action="" class="form">
+                    <form action="https://formspree.io/f/xayzanqy" method="POST" class="form" id="form">
                         <div class="contenido2">
                             <div class="contenido">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
+                                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
                             </div>
 
                             <div class="contenido">
-                                <label for="pet-select">Titulo</label>
-                                <input name="numero" id="pet-select" placeholder="Ingresa tu número">
+                                <label for="pet-select">Número</label>
+                                <input type="number" name="numero" id="pet-select" placeholder="Ingresa tu número">
                                 </input>
                             </div>
                         </div>
                         <br>
                         <div class="contenido">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                            <input type="email" name="email" id="email" placeholder="Ingresa tu email" required>
                         </div>
                         <br>
                         <div class="contenido">
                             <label for="texto">Mensaje</label>
-                            <textarea type="text" name="mensaje" id="texto" cols="40" rows="10" placeholder="¿En qué podemos ayudarte? "></textarea>
+                            <textarea type="text" name="mensaje" id="texto" cols="40" rows="10" placeholder="¿En qué podemos ayudarte? " required></textarea>
                         </div>
                         <br>
                         <button type="submit" id="enviar">Enviar</button>
@@ -80,9 +81,20 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="divFooter">
+                <a href="../indexAW.html"><img src="../images/prueba3 negro.png" alt="logo all works" class="logo"></a>
+              <img src="/images/pruebaSat2.png" alt="logo all works & sat" class="logo">
+            </div>
+            <span class="copyright">2023, All Works. Todos los derechos reservados ©
+              <br>
+            </span>
+          </footer>
     </div>
 
-    <script src="../javascript/main.js"></script>
+    <script src="../javascript/mainAWS.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>

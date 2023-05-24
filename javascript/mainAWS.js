@@ -2,6 +2,7 @@ const mode = document.querySelectorAll(".mode")
 const body = document.body
 const texto = document.getElementById("modoTexto")
 const flechas = document.querySelectorAll(".js")
+const $form = document.getElementById("form");
 
 mode[0].addEventListener("click", () => {
     const value = body.classList.toggle("bright")
@@ -30,3 +31,29 @@ window.addEventListener("scroll", () => {
         })
     }
 })
+
+$form.addEventListener("submit", handleSubmit)
+
+async function handleSubmit(e){
+    e.preventDefault();
+    const form = new FormData(this);
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: form,
+        headers: {
+            "Accept": "application/json"
+        }
+    })
+    if(response.ok){
+        Swal.fire({
+            position: '',
+            icon: 'success',
+            title: 'Tu e-mail fue enviado',
+            text:"¡Gracias por contactarte con All Works & Sat!",
+            showConfirmButton: false,
+            timer: 2500,
+            width: "400px"
+          })
+        $form.reset()
+    }   
+}
